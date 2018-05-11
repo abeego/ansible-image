@@ -7,6 +7,7 @@ RUN apk update && \
 
 # Add volume for Ansible playbooks
 VOLUME /ansible
+COPY ansible/probe.yml ansible/site.yml
 WORKDIR /ansible
 
 # Entrypoint
